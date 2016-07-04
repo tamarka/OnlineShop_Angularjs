@@ -1,0 +1,3 @@
+{
+  "instructions": "Please click the \"Fetch Products\" button to load the products.\nYou can then put them into the basket by clicking the \"Add\" button next to them.\n\nFinally after having some products in the basket you can order them by clicking \"Place Order\". This will show an alert with the products that would be ordered."
+}

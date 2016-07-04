@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "A notebook",
+      "text": "This is the first description",
+      "image": "https://unsplash.it/500?image=1"
+    },
+    {
+      "id": "1",
+      "name": "Rocks from the beach",
+      "text": "This is the second description",
+      "image": "https://unsplash.it/500?image=12"
+    },
+    {
+      "id": "2",
+      "name": "Creepy forks",
+      "text": "This is the third description",
+      "image": "https://unsplash.it/500?image=23"
+    },
+    {
+      "id": "3",
+      "name": "Nuclear waste",
+      "text": "This is the fourth description",
+      "image": "https://unsplash.it/500?image=34"
+    },
+    {
+      "id": "4",
+      "name": "An unsafe car",
+      "text": "This is the fifth description",
+      "image": "https://unsplash.it/500?image=45"
+    },
+    {
+      "id": "5",
+      "name": "A broken lens",
+      "text": "This is the sixth description",
+      "image": "https://unsplash.it/500?image=56"
+    },
+    {
+      "id": "6",
+      "name": "A panoramic view",
+      "text": "This is the seventh description",
+      "image": "https://unsplash.it/500?image=67"
+    },
+    {
+      "id": "7",
+      "name": "An old door",
+      "text": "This is the eighth description",
+      "image": "https://unsplash.it/500?image=78"
+    },
+    {
+      "id": "8",
+      "name": "Grass",
+      "text": "This is the ninth description",
+      "image": "https://unsplash.it/500?image=89"
+    }
+  ]
+}

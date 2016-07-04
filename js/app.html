@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Minishop</h1>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="../img/info.svg" alt="info">
+            <p>Please click the
+                “Load latest products”
+                button to load the
+                products
+            </p>
+            <p>You can then put
+                them into the basket
+                by clicking the "Add"
+                button next to them.
+            </p>
+            <p>Finally after having
+                some products in the
+                basket you can order
+                them by clicking
+                "Place Order". This will
+                show an alert with the
+                products that would
+                be ordered."
+            </p>
+        </div>
+        <div class="col-md-6">
+            <button value="load" ng-click="Greet()">Load latest products</button>
+            <table>
+                <tr ng-repeat="product in products">
+                    <td>{{product.name}}<br>
+                    {{product.text}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-3">
+        </div>
+     </div>
+</div>

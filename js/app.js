@@ -23,21 +23,34 @@ var AppControllers = angular.module('AppControllers', [])
         function (AppService) {
             var self = this;
             self.products=[];
-            self.products=AppService;
-            console.log(self.products);
+            self.instruction;
+
+            this.getProducts=function() {
+                var result=AppService('/data/products.json').get().$promise;
+                result.then(function onSuccess(response){
+                    self.products=result.$$state.value.products;
+                },
+                function onFail(response) {
+                    console.log(response.status);
+                });
+            };
+
+            var instruction=AppService('/data/instructions.json').get().$promise;
+            instruction.then(function onSuccess(response){
+                    self.instruction=instruction.$$state.value.instructions;
+                    console.log(self.instruction);
+                },
+                function onFail(response) {
+                    console.log(response.status);
+                });
+
         }]);
 
 var AppServices = angular.module('AppServices', [])
     .factory('AppService', ['$resource',
         function ($resource) {
-            var resource=$resource('/data/products.json');
-            this.products=resource.get();
+            return function(urlParam){
+                return $resource(urlParam);
+            }
 
-            resource.get({
-                fakeOptionalParameter : '/error'
-            }).$promise.then(null, function(value) {
-                console.log(value.status);
-            });
-
-            return this.products;
         }]);

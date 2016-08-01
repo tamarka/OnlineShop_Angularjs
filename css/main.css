@@ -94,7 +94,14 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.square{
+    display: table;
+}
+.products{
+    display: table-cell;
+    background-repeat: no-repeat;
+    height: 30%;
+}
 
 
 

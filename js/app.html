@@ -7,14 +7,17 @@
         </div>
         <div class="col-md-6">
             <button value="load" ng-click="app.getProducts()">Load latest products</button>
-            <table>
-                <tr ng-repeat="product in app.products">
-                    <td>{{product.name}}<br>
-                    {{product.text}}</td>
-                </tr>
-            </table>
+            <div class="square col-md-12">
+                <div ng-repeat="product in app.products" class="products col-md-4" style="background-image: url({{product.image}});" >
+                    <h2>{{product.name}}</h2><br>
+                    <p>{{product.text}}</p><br>
+                    <button value="add">9.30e Add</button>
+                </div>
+            </div>
         </div>
         <div class="col-md-3">
+            <img src="../img/cart.svg" alt="cart">
+            <button value="order">Place order</button>
         </div>
      </div>
 </div>

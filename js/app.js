@@ -23,7 +23,7 @@ var AppControllers = angular.module('AppControllers', [])
         function (AppService) {
             var self = this;
             self.products=[];
-            self.instruction;
+            self.instruction=[];
 
             this.getProducts=function() {
                 var result=AppService('/data/products.json').get().$promise;

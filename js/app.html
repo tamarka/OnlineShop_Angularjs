@@ -7,11 +7,18 @@
         </div>
         <div class="col-md-6">
             <button value="load" ng-click="app.getProducts()">Load latest products</button>
-            <div class="square col-md-12">
-                <div ng-repeat="product in app.products" class="products col-md-4" style="background-image: url({{product.image}});" >
-                    <h2>{{product.name}}</h2><br>
-                    <p>{{product.text}}</p><br>
-                    <button value="add">9.30e Add</button>
+            <div ng-show="loading">
+                <img src="../img/loader.svg" alt="loader">
+                <h2>Loading latest products...</h2>
+            </div>
+            <div class="square col-md-12 col-xs-12">
+                <div ng-repeat="product in app.products" class="products col-md-4 col-xs-6">
+                    <img class="productImg" ng-src="{{product.image}}"/>
+                    <div class="productContent">
+                        <h4>{{product.name}}</h4><br>
+                        <p>{{product.text}}</p><br>
+                        <button value="add">9.30e Add</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -99,8 +99,19 @@ textarea {
 }
 .products{
     display: table-cell;
-    background-repeat: no-repeat;
-    height: 30%;
+    padding: 0px !important;
+}
+.productImg {
+    position: relative;
+    width: auto;;
+    heigh: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+.productContent{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
 }
 
 

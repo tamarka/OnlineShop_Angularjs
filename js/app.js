@@ -24,6 +24,7 @@ var AppControllers = angular.module('AppControllers', [])
             var self = this;
             self.products=[];
             self.instruction=[];
+            self.loading=true;
 
             this.getProducts=function() {
                 var result=AppService('/data/products.json').get().$promise;
@@ -38,7 +39,6 @@ var AppControllers = angular.module('AppControllers', [])
             var instruction=AppService('/data/instructions.json').get().$promise;
             instruction.then(function onSuccess(response){
                     self.instruction=instruction.$$state.value.instructions;
-                    console.log(self.instruction);
                 },
                 function onFail(response) {
                     console.log(response.status);
